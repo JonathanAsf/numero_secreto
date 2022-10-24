@@ -11,8 +11,12 @@ total_de_tentativas = 3
 for rodada in range (1, total_de_tentativas + 1 ):
   
   print('Tentiva {} de {}'.format(rodada, total_de_tentativas))
-  suposicao=int(input('Digite o seu número:\n')) #Tentativa de acertar o numero secreto
+  suposicao=int(input('** Digite o seu número de 1 a 100 **\n')) #Tentativa de acertar o numero secreto
   print("Você digitou: ",suposicao)
+
+  if(suposicao < 1 or suposicao > 100):
+      print('** Você deve digitar um número entre 1 e 100! ** ')
+      continue
   #Variáveis internas do laço
   acertou =  suposicao == numero_secreto 
   maior = suposicao > numero_secreto
@@ -24,6 +28,7 @@ for rodada in range (1, total_de_tentativas + 1 ):
    print('Parabéns!')
    print('Você digitou o número correto!')
    print(10 * "*")
+   break
    #Dica para caso de erro
   else:
     if(maior):
@@ -31,7 +36,6 @@ for rodada in range (1, total_de_tentativas + 1 ):
     elif(menor):
     
       print('Você errou! O seu chute foi menor que o número secreto.')
-
-  #Para quando o número tentativas máximas foi alcançado.
-print("Game Over, mais sorte na próxima vez")
+  
+print('Fim de jogo')
 
