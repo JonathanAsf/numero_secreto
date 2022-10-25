@@ -13,9 +13,8 @@ def jogar():
 
   #Seleção de dificuldade
   print('Selecione um nível de dificuldade: ')
-  print('1 - Fácil (20 tentativas) ')
-  print('2 - Médio (10 tentativas)')
-  print('3 - Difícil (5 tentativas)')
+  print(' 1 - Fácil (20 tentativas)\n 2 - Médio (10 tentativas)\n 3 - Difícil (5 tentativas)\n')
+  
 
   dificuldade = int(input(''))
 
